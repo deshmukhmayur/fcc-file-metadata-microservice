@@ -21,7 +21,8 @@ function clrDir(dirPath) {
       if (fs.statSync(filePath).isFile())
         fs.unlinkSync(filePath);
       else
-        rmDir(filePath);
+        clrDir(filePath);
+        fs.rmdirSync(filePath);
     }
   // fs.rmdirSync(dirPath);
 };
