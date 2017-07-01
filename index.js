@@ -1,11 +1,8 @@
 var path = require('path');
 var express = require('express');
 var upload = require('multer')({ dest: 'uploads/' });
-var env = require('node-env-file');
 
 var app = express();
-
-env(__dirname + '/.env');
 
 // to prettify JSON output
 app.set('json spaces', 40);
