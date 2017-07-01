@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>File Metadata Microservice (JSON API)</title>
+  
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h3>File Metadata Microservice (JSON API)</h3>
+    
+    <blockquote>
+      <h5>User stories:</h5>
+      <ol>
+        <li>I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)</li>
+        <li>If it does, it returns both the Unix timestamp and the natural language form of that date.</li>
+        <li>If it does not contain a date or Unix timestamp, it returns null for those properties.</li>
+      </ol>
+    </blockquote>
+    <p>
+      Example usage:
+    </p>
+    <form method="POST" enctype="multipart/form-data" action="/upload">
+      <div class="row">
+        <div class="file-field input-field col s11">
+          <div class="btn">
+            <span>File</span>
+            <input type="file" name="file" accept="image/*" required>
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" required>
+          </div>
+        </div>
+        <button class="btn btn-flat btn-large waves-effect waves-teal col s1"><i class="material-icons">send</i></button>
+      </div>
+    </form>
+    <p>
+      Example output:
+    </p>
+    <samp><pre class="pink-text">
+    { "file_size": 102400 }
+    </pre></samp>
+  </main>
+  
+
+  <footer class="page-footer grey">
+		<div class="footer-copyright">
+			<div class="container right-align">&copy; 2017 <a href="//deshmukhmayur.com" class="white-text">Mayur Deshmukh</a>
+			</div>
+		</div>
+	</footer>
+  
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+</body>
+</html>
